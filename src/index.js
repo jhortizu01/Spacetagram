@@ -25,7 +25,6 @@ function fetchAPI() {
  }
 
  function showCards() {
-   console.log('1', spaceObject)
   spaceObject.map(object =>
     {
     const spaceCard = document.createElement('div');
