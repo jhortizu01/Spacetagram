@@ -1,8 +1,10 @@
-import "./style.scss";
+import "./styles/style.scss";
 import SpaceRepository from "./classes/spaceRepository.js";
 import SpaceObject from "./classes/spaceObject.js";
-// import "./images/like.svg"
-// import "./images/unlike.svg"
+import "./images/like.svg"
+import "./images/unlike.svg"
+import "./images/space-background.jpeg"
+
 
 let spaceRepository, spaceObject
 

@@ -18,17 +18,15 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
           "style-loader",
-          // Translates CSS into CommonJS
           "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
-        ],
+          "sass-loader"
+        ]
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader", "sass-loader"],
+    
       },
       {
         test: /\.(png|svg|jpg|gif|jpeg)$/,
@@ -44,8 +42,8 @@ module.exports = {
         ]
       }
     ]
- 
   },
+
   plugins: [
     new NodePolyfillPlugin()
   ]
