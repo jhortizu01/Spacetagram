@@ -1,10 +1,10 @@
-import "./styles/style.scss";
+import "./styles/index.scss";
 import SpaceRepository from "./classes/spaceRepository.js";
 import SpaceObject from "./classes/spaceObject.js";
 import "./images/like.svg"
 import "./images/unlike.svg"
 import "./images/space-background.jpeg"
-
+import "./images/astronaut-dance.gif"
 
 let spaceRepository, spaceObject
 
@@ -34,14 +34,16 @@ function fetchAPI() {
 
     let cardContent =
     `<div class="card">
-      <input type="button" class="like-button unlike" id="likeButton"></input>
+      <input type="button" class="like-button unlike" id="likeButton">
+      </input>
+    
       <p class="date">${object.date}</p>
       <img src="${object.hdurl}" class="card-image" alt="${object.title}">
-      <div class="card-description">
+      <article class="card-description">
         <p class="title">${object.title}</p><br>
         <p class="description">${object.explanation}
         </p>
-      </div>
+      </article>
     </div>`
 
     cardContainer.innerHTML += cardContent

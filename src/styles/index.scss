@@ -3,8 +3,19 @@ body {
   margin: 0px;
 }
 
+.load-screen {
+  background-image: url('../images/astronaut-dance.gif');
+  background-repeat: no-repeat;
+  background-color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+}
+
 nav {
-  background-image: url(./images/space-background.jpeg);
+  background-image: url('../images/space-background.jpeg');
   color: white;
   height: 150px;
   width: 100%;
@@ -31,6 +42,8 @@ main {
   margin-left: 25px;
   border-radius: 25px;
   overflow: scroll;
+  -webkit-box-shadow: 0px 8px 17px -2px #000000; 
+  box-shadow: 0px 8px 17px -2px #000000;
 }
 
 .card ::-webkit-scrollbar {
@@ -61,20 +74,28 @@ main {
   max-height: 300px;
 }
 
+input {
+  cursor: pointer;
+  width: 90px;
+  border: none;
+  height: 200px;
+
+}
 
 .unlike {
-  background-image: url(./images/unlike.svg);
+  background: url('../images/unlike.svg');
   bottom: 10px;
-  height: 75px;
+  height: 90px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .like {
-  background-image: url(./images/like.svg);
+  background-image: url('../images/like.svg');
+  background-color: white;
   bottom: 10px;
-  height: 75px;
+  height: 90px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -95,6 +116,7 @@ main {
 
 .description {
   font-size: 20px;
+  text-align: left;
 }
 
 .date {
