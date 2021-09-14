@@ -1,6 +1,8 @@
 const path = require('path')
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 const sass = require('sass')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 
 module.exports = {
   entry: './src/index.js',
@@ -12,40 +14,23 @@ module.exports = {
     port: 8080,
     static: path.resolve(__dirname, 'dist')
   },
-   mode: "none",
+   mode: "development",
    module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ]
+        test: /\.s?css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       },
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
-    
-      },
-      {
-        test: /\.(png|svg|jpg|gif|jpeg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images/',
-              publicPath: 'images/'
-            }
-          }
-        ]
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset"
       }
     ]
   },
 
   plugins: [
-    new NodePolyfillPlugin()
+    new NodePolyfillPlugin(), 
+    new MiniCssExtractPlugin()
   ]
 
 }
