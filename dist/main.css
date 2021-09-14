@@ -7,8 +7,15 @@ body {
 }
 
 .load-screen {
-  background-image: url(47f6facd21fd9e48e255.gif);
-  background-color: black;
+  background-image: url(50c4198ef3aa4b55b73b.gif), url(7b54e2384da0d60918bc.jpeg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
 }
 
 nav {

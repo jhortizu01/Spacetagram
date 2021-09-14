@@ -4,7 +4,7 @@ import SpaceObject from "./classes/spaceObject.js";
 import "./images/like.svg"
 import "./images/unlike.svg"
 import "./images/space-background.jpeg"
-import "./images/astronaut-dance.gif"
+import "./images/astronaut.gif"
 
 let spaceRepository, spaceObject
 
@@ -22,7 +22,6 @@ function fetchAPI() {
    spaceObject = data.map(object => {
     return new SpaceObject(object)
    })
-   
    showCards()
  }
 
@@ -50,8 +49,14 @@ function fetchAPI() {
   })
  }
 
+ function loadScreen() {
+   let loader = document.getElementById("loadScreen")
+   loader.parentElement.removeChild(loader)
+ }
+
  window.addEventListener('load', () => {
-   fetchAPI()
+  setTimeout(loadScreen, 1000)
+  fetchAPI()
  })
 
 cardContainer.addEventListener('click', (e) => {

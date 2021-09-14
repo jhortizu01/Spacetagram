@@ -3,10 +3,21 @@ body {
   margin: 0px;
 }
 
+.loading-title {
+  font-size:  100px;
+  color: white;
+  text-align: center;
+  padding-top: 75px;
+}
+
 .load-screen {
-  background-image: url('../images/astronaut-dance.gif');
+  background-image: url('../images/astronaut.gif'),
+                    url('../images/space-background.jpeg');
   background-repeat: no-repeat;
-  background-color: black;
+  background-position-x: center;
+  background-position-y: center;
+  position: absolute;
+  font-family: 'Share Tech Mono', monospace;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -24,6 +35,11 @@ nav {
   font-size: 80px;
   text-align: center;
   box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+
+.date-picker {
+  font-size: 300px;
+  color: white;
 }
 
 main {
