@@ -36,18 +36,18 @@ function fetchAPI() {
     spaceCard.classList = 'space-card';
 
     let cardContent =
-    `<div class="card">
-      <input type="button" class="like-button unlike" id="likeButton">
+    `<section class="card">
+      <input aria-label="like" type="button" class="like-button unlike" id="likeButton">
       </input>
-      <p class="date">${object.date}</p>
+      <p aria-label="date of photo" role="note" class="date">${object.date}</p>
       <img src="${object.hdurl}" class="card-image" alt="${object.title}">
-      <input type="text" value="${object.hdurl}" id="imageLink">
-        <button type="button" class="copy-image" id="copyImage"> Copy image link! </button>
+      <input aria-label="image link ${object.hdurl}" type="text" value="${object.hdurl}" id="imageLink" class="image-link"><br>
+        <button aria-label="click to copy image link" type="button" class="copy-image" id="copyImage"> Copy image link! </button>
       <article class="card-description">
-        <p class="title">${object.title}</p><br>
-        <p class="description">${object.explanation}</p>
+        <p  aria-label="${object.title}" class="title">${object.title}</p><br>
+        <p  aria-label="${object.explanation}" class="description">${object.explanation}</p>
       </article>
-    </div>`
+    </section>`
 
     cardContainer.innerHTML += cardContent
   })
@@ -97,15 +97,22 @@ function fetchAPI() {
   }
  }
 
+
+
 cardContainer.addEventListener('click', (e) => {
   let eventButton = e.target
-  //console.log(eventButton)
+  let likeBtn = document.getElementById('likeButton')
+ // let ariaLabel = eventButton.ariaLabel;
+
+
   if(eventButton.classList.contains('unlike')) {
     eventButton.classList.remove('unlike')
     eventButton.classList.add('like')
+    eventButton.ariaLabel = 'unlike'
   } else if (eventButton.classList.contains('like')) {
     eventButton.classList.remove('like')
     eventButton.classList.add('unlike')
+    eventButton.ariaLabel = 'like'
   } else if (eventButton.classList.contains('copy-image')) {
       copyPageUrl()
   }
