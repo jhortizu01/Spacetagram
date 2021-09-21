@@ -8,10 +8,21 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="load-screen"></div>
   <nav>
     <h1 class="spacetagram">Spacetagram</h1>
-    <h2> date picker</h2>
+    <section class="date-picker" id="datePicker">
+      <section aria-hidden="true" class="date-errors">
+        <p aria-hidden="true" id="wrongStart" class="wrong-start hidden">Enter a date after June 16, 1995!</p>
+        <p aria-hidden="true" id="wrongEnd" class="wrong-end hidden">Enter today's date or a date before today!</p>
+      </section>
+      <section class="date-input">
+        <h2> Let me see photos from: </h2>
+        <input aria-label="Insert start date" type="date"  value="YYYY-MM-DD" class="start-date" id="startDate" min="1995-06-16" max="2000-13-13">
+        <h2>To: </h2>  
+        <input aria-label="Insert end date" type="date"  value="YYYY-MM-DD" class="end-date" id="endDate" min="1995-06-17" max="2000-13-13">
+        <input type="submit" class="submit-button" id="submitButton">
+      </section>
+    </section>
   </nav>
   <main class="card-container" id="cardContainer">
     <!-- cards here -->

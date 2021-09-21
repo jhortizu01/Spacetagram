@@ -13,6 +13,7 @@
   "author": "Janika Hortizuela",
   "license": "ISC",
   "dependencies": {
+    "dayjs": "^1.10.7",
     "linebyline": "^1.3.0",
     "mocha": "^9.1.1",
     "node-polyfill-webpack-plugin": "^1.1.4",
