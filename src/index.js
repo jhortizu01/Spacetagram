@@ -72,7 +72,7 @@ const validateData = (start, end) => {
      wrongStartError.classList.add('hidden')
      wrongEndError.classList.add('hidden')
     fetchNewDates(start, end)
-    clearCards()
+    clearCards(cardContainer)
    }
  }
 
@@ -84,7 +84,7 @@ const fetchNewDates = (start, end) => {
    .catch(error => console.log(error))
  }
 
-const clearCards = () => {
+const clearCards = (container) => {
   while (container.firstChild) {
    container.removeChild(container.firstChild);
  }
