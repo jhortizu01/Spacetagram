@@ -27,7 +27,8 @@ Spacetegram is an app where users can see images from the NASA api with a brief 
 
 ## Illustrations
 
-![gif of project](https://gifyu.com/image/P47B)
+![Screen Shot 2021-09-21 at 11 36 13 AM](https://user-images.githubusercontent.com/21073095/134220075-d2db3a19-2309-464a-8ba5-173801260d0e.png)
+
 
 ## Install + Setup
 1) clone down to your machine
