@@ -122,6 +122,7 @@ cardContainer.addEventListener('click', (e) => {
 
 async function copyPageUrl() {
   var copyText = document.getElementById('imageLink').value;
+  console.log(copyText)
   try {
     await navigator.clipboard.writeText(copyText);
     console.log('Page URL copied to clipboard');
